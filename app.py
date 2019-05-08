@@ -12,4 +12,5 @@ def hello():
 @app.route('/profile/<username>')
 def show_profile(username):
     #: tanda %s untuk tipe data string
-    return 'Hello %s' % username + '!!!'
+    #: memanggil profil.html dengan parameter username
+    return render_template('profil.html', username=username) #: key = value
