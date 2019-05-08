@@ -17,5 +17,5 @@ def show_profile(username):
 @app.route('/login', methods=['GET','POST'])
 def show_login():
     if request.method == 'POST':
-        return 'Betul ini method POST'
+        return 'Email kamu adalah '+ request.form['email']
     return render_template('login.html')
