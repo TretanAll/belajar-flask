@@ -11,6 +11,5 @@ def hello():
 #: route untuk url tambahan + parameter
 @app.route('/profile/<username>')
 def show_profile(username):
-    #: tanda %s untuk tipe data string
     #: memanggil profil.html dengan parameter username
     return render_template('profil.html', username=username) #: key = value
