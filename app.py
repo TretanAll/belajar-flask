@@ -1,4 +1,4 @@
-from flask  import Flask, render_template
+from flask  import Flask, render_template, request
 app = Flask(__name__)
 
 #: route untuk index
@@ -14,6 +14,8 @@ def show_profile(username):
     #: memanggil profil.html dengan parameter username
     return render_template('profil.html', username=username) #: key = value
 
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def show_login():
+    if request.method == 'POST':
+        return 'Betul ini method POST'
     return render_template('login.html')
