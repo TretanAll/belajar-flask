@@ -13,3 +13,7 @@ def hello():
 def show_profile(username):
     #: memanggil profil.html dengan parameter username
     return render_template('profil.html', username=username) #: key = value
+
+@app.route('/login')
+def show_login():
+    return render_template('login.html')
